@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_game"
+    app:startDestination="@id/gameFr">
+
+    <fragment
+        android:id="@+id/gameFr"
+        android:name="nit2x.paba.cnavgraph.GameFr"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFr_to_scoreFr"
+            app:destination="@id/scoreFr" />
+        <action
+            android:id="@+id/action_gameFr_to_profileAct"
+            app:destination="@id/profileAct" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFr"
+        android:name="nit2x.paba.cnavgraph.ScoreFr"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" />
+    <activity
+        android:id="@+id/profileAct"
+        android:name="nit2x.paba.cnavgraph.ProfileAct"
+        android:label="activity_profile"
+        tools:layout="@layout/activity_profile" />
+</navigation>
